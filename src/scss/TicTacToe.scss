@@ -1,0 +1,28 @@
+@import "~react-toolbox/components/commons";
+
+.index {
+  width: 60rem;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.card {
+  width: 36.5rem;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  
+  button {
+    width: 10rem;
+    height: 10rem;
+    margin: 0.5rem;
+  }
+}
+
+button a {
+  color: inherit;
+}
