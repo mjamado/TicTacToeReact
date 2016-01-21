@@ -27,7 +27,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'tmp'),
     publicPath: '',
-    filename: '[name].js',
+    filename: 'include/js/[name].js',
     library: '[name]',
     pathInfo: true
   },
@@ -55,8 +55,8 @@ module.exports = {
   postcss: [autoprefixer],
   
   plugins: [
-    new ExtractTextPlugin('style.css'),
-    new webpack.optimize.CommonsChunkPlugin('common', 'common.js'),
+    new ExtractTextPlugin('include/css/style.css'),
+    new webpack.optimize.CommonsChunkPlugin('common', 'include/js/common.js'),
     new webpack.optimize.UglifyJsPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
