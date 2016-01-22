@@ -8,24 +8,29 @@
 ### Motivation ###
 
 As a full-time full-stack developer with a lot on his plate, I've glossed over
-the last couple years with no time to look at what was happening around the
+the last couple years with no time to look into what was happening around the
 front-end scene.
 
 Sure, I've read a couple things, but I just didn't have the time to tinker
-with the all the new shiny stuff. Reading is good for you, but you'll learn
+with all the new shiny stuff. Reading is good for you, but you'll learn
 jack without getting your hands dirty.
 
-Se, here I was, more than a year behind off all the cool kids with their new
-front-end stuff. What could I cobble together, away from yet another To Do app?
+Se, what could I cobble together, away from yet another To Do app?
 And what's with that particular example, anyway?
 
 I had my TicTacToeJS laying around (and it has presentation problems - just
 discovered that while working on this one), it looked like it could make a cool
 adaptation: it had to maintain state, the interface was pretty straightforward,
-it had lots of user interaction. Sure enough, let's do this.
+it had lots of user interaction.
+
+I tried to make this project also as much as a boilerplate as I could. For such
+a simple little app, one could argue that half the stuff was uncalled for. Heck,
+projects as simple as this one should be vanilla JS anyway. But on using everything
+a *big* project needs, I learned a lot and I can always start big projects from
+this sort of boilerplate.
 
 I won't go over the TicTacToe part again. The AI of the game was slightly
-adapted, but the theory is the same. Go read what I've written in the original
+adapted, but the theory is the same. Go read what I wrote in the original
 project. 
 
 ### Technologies and stack ###
@@ -44,7 +49,7 @@ project.
   
   I'll be honest, I only discovered this while doing this project but *OMG!*,
   this is awesome! Scoped CSS may be the most useful single feature in years for
-  CSS. *'Nough said*.
+  CSS. *'Nuff said*.
 
 * **React and JSX**
   
@@ -130,5 +135,5 @@ npm run deploy
 You'll get a new folder `tmp` with only the necessary files, with much more sane filesizes.
 You could even open `index.html` directly, and it would work - if not for some cross-origin
 protection from the browser and it's History API, but I'll get to that problem some day.
-Anyway, that problem won't be one as soon as this would be deployed on some Node.js server
+Anyway, that problem won't be one as soon as the project gets deployed on some Node.js server
 somewhere.
