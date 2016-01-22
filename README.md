@@ -15,7 +15,7 @@ Sure, I've read a couple things, but I just didn't have the time to tinker
 with all the new shiny stuff. Reading is good for you, but you'll learn
 jack without getting your hands dirty.
 
-Se, what could I cobble together, away from yet another To Do app?
+So, what could I cobble together, away from yet another To Do app?
 And what's with that particular example, anyway?
 
 I had my TicTacToeJS laying around (and it has presentation problems - just
