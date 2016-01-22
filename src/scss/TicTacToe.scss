@@ -10,7 +10,7 @@
 }
 
 .card {
-  width: 36.5rem;
+  width: 60rem;
   margin: auto;
   top: 2rem;
   position: relative;
@@ -21,11 +21,17 @@
 
 .board {
   display: flex;
+  width: 31rem;
   flex-wrap: wrap;
+  margin: auto;
   
   button {
-    width: 10rem;
-    height: 10rem;
+    min-width: 8rem;
+    height: 8rem;
     margin: 0.5rem;
   }
+}
+
+.cardActions {
+  justify-content: flex-end;
 }

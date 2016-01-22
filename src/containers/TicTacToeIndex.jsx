@@ -26,8 +26,8 @@ class TicTacToeIndex extends Component {
           <p>Este projecto junta várias tecnologias necessárias ao pacote <b>React/Redux</b>, e também pode servir como <i>boilerplate</i>.</p>
           <p>Ide jogar!</p>
         </CardText>
-        <CardActions>
-          <Link to="/play"><Button raised primary>{translations.play}</Button></Link>
+        <CardActions className={styles.cardActions}>
+          <Link to="/play"><Button icon="play_arrow" raised primary>{translations.play}</Button></Link>
         </CardActions>
       </Card>
     )

@@ -9,7 +9,9 @@ const initialState = {
     youwon: 'Ganhaste!',
     iwon: 'Ganhei!',
     itsatie: 'É um empate!',
-    play: 'Jogar'
+    play: 'Jogar',
+    home: 'Início',
+    reset: 'Limpar'
   },
   en: {
     appTitle: 'TicTacToe v2',
@@ -21,7 +23,9 @@ const initialState = {
     youwon: 'You won!',
     iwon: 'I won!',
     itsatie: 'It\'s a tie!',
-    play: 'Play'
+    play: 'Play',
+    home: 'Home',
+    reset: 'Reset'
   }
 };
 

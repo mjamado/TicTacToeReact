@@ -17,6 +17,7 @@ class TicTacToe extends Component {
         gameAux={gameAux}
         onSquareClick={(x, y) => dispatch(actions.playerPlay(x, y))}
         onDialogOk={() => dispatch(actions.resetBoard())}
+        onReset={() => dispatch(actions.resetBoard())}
       /> 
     )
   }

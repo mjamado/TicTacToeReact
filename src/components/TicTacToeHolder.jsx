@@ -1,5 +1,7 @@
 import React, {Component, PropTypes} from 'react';
-import {Card, CardTitle} from 'react-toolbox/lib/card';
+import {Card, CardTitle, CardActions} from 'react-toolbox/lib/card';
+import {Button} from 'react-toolbox';
+import {Link} from 'react-router';
 import Dialog from 'react-toolbox/lib/dialog';
 
 import TicTacToeBoard from '../components/TicTacToeBoard';
@@ -26,7 +28,8 @@ export default class TicTacToeHolder extends Component {
       gameAux,
       score,
       onSquareClick,
-      onDialogOk
+      onDialogOk,
+      onReset
     } = this.props;
     
     return (
@@ -45,6 +48,10 @@ export default class TicTacToeHolder extends Component {
             score: score
           }}
         />
+        <CardActions className={styles.cardActions}>
+          <Link to="/"><Button icon="home" raised primary>{translations.home}</Button></Link>
+          <Button icon="autorenew" raised onMouseUp={onReset}>{translations.reset}</Button>
+        </CardActions>
         <Dialog
           actions={[{label: 'Ok', onClick: onDialogOk}]}
           active={gameAux.status !== 'playing'}
@@ -60,6 +67,7 @@ export default class TicTacToeHolder extends Component {
 TicTacToeHolder.propTypes = {
   onSquareClick: PropTypes.func.isRequired,
   onDialogOk: PropTypes.func.isRequired,
+  onReset: PropTypes.func.isRequired,
   squares: PropTypes.arrayOf(
     PropTypes.shape({
       status: PropTypes.string.isRequired,
