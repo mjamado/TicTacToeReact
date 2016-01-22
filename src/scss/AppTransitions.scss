@@ -1,0 +1,17 @@
+.crossfadeEnter {
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
+}
+
+.crossfadeEnter.crossfadeEnterActive {
+  opacity: 1;
+}
+
+.crossfadeLeave {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.crossfadeLeave.crossfadeLeaveActive {
+  opacity: 0;
+}

@@ -3,13 +3,20 @@
 .index {
   width: 60rem;
   margin: auto;
-  margin-top: 2rem;
+  top: 2rem;
+  position: fixed;
+  left: 0;
+  right: 0;
 }
 
 .card {
   width: 36.5rem;
   margin: auto;
-  margin-top: 2rem;
+  top: 2rem;
+  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
 }
 
 .board {
