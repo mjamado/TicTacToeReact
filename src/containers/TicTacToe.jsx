@@ -16,7 +16,7 @@ class TicTacToe extends Component {
         score={score}
         gameAux={gameAux}
         onSquareClick={(x, y) => dispatch(actions.playerPlay(x, y))}
-        onDialogOk={() => dispatch(actions.resetBoard())}
+        onDialogOk={() => dispatch(actions.gameEnd())}
         onReset={() => dispatch(actions.resetBoard())}
       /> 
     )

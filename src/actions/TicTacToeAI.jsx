@@ -165,7 +165,7 @@ function strategicPlay() {
   if (lastStarter === 0) {
     switch (move) {
       case 0:
-        playChoose({corner: true, center: true});
+        return playChoose({corner: true, center: true});
         break;
   
       case 1:
@@ -198,7 +198,12 @@ function strategicPlay() {
   
       case 3:
       case 4:
-        return playChoose();
+        let choosed = playChoose(undefined, {what: 'anything', you: 2});
+        if (choosed !== false) {
+          return choosed;
+        } else {
+          return playChoose();
+        }
         break;
     }
   } else {
@@ -231,7 +236,12 @@ function strategicPlay() {
         break;
       case 2:
       case 3:
-        return playChoose();
+        let choosed = playChoose(undefined, {what: 'anything', you: 2});
+        if (choosed !== false) {
+          return choosed;
+        } else {
+          return playChoose();
+        }
         break;
     }
   }
@@ -245,10 +255,24 @@ function isWall(x, y) {
   return (x === 1) || (y === 1);
 }
 
-export function init(initSquares, initMyLastPlay, initYourLastPlay) {
+export function init(initSquares, initMyLastPlay, initYourLastPlay, starter) {
   squares = initSquares;
-  move = Math.floor(squares.reduce((moveCnt, square) => (moveCnt + ((square !== null) ? 1 : 0)), 0) / 2);
-  lastStarter = (squares.reduce((playerCnt, square) => playerCnt + ((square === 1) ? 1 : 0)) === move) ? 0 : 1;
+  
+  let playerMvs = 0;
+  let meMvs = 0;
+  
+  for (let i in squares) {
+    if (squares.hasOwnProperty(i)) {
+      if (squares[i] === 1) {
+        playerMvs++;
+      } else if (squares[i] === 2) {
+        meMvs++;
+      }
+    }
+  }
+ 
+  lastStarter = starter;
+  move = ((lastStarter === 0) ? Math.ceil((playerMvs + meMvs) / 2) : Math.floor((playerMvs + meMvs) / 2));
   myLastPlay = initMyLastPlay;
   yourLastPlay = initYourLastPlay;
 }

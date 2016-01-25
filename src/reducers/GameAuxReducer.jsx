@@ -2,9 +2,8 @@ import * as types from '../constants/ActionTypes';
 
 const initialState = {
   language: 'pt',
-  playerRound: false,
   status: 'playing',
-  starter: 0,
+  starter: 1,
   myLastPlay: {},
   yourLastPlay: {}
 };
@@ -15,7 +14,6 @@ export default function GameAuxReducer(state = initialState, action) {
       return Object.assign({},
         state,
         {
-          playerRound: !action.player,
           myLastPlay: action.player ? state.myLastPlay : {x: action.x, y: action.y},
           yourLastPlay: action.player ? {x: action.x, y: action.y} : state.yourLastPlay
         }
@@ -52,8 +50,7 @@ export default function GameAuxReducer(state = initialState, action) {
           myLastPlay: {},
           yourLastPlay: {},
           starter: (state.starter === 0) ? 1 : 0,
-          status: 'playing',
-          playerRound: (state.starter === 0) ? true : false,
+          status: 'playing'
         }
       );
     
